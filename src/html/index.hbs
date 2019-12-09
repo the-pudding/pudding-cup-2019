@@ -21,36 +21,36 @@
 	{{> base/header 'sticky'}}
 
 	<main id='content'>
-	
+
 		{{> story/intro }}
 		<div class='prelude prose'>
 			{{#each doc.prelude}}
 				<p>{{{value}}}</p>
 			{{/each}}
 		</div>
-	
-		{{!-- <section id='winners'>
+
+		<section id='winners'>
 			<div class='hed'>
-				<h2>{{doc.hed1}}</h2>
-				<p>{{doc.dek1}}</p>
-				<p>{{doc.prize1}}</p>
+				<h2>The Winners</h2>
+				<p>Our three favorite essays.</p>
 			</div>
-	
-	
 			<ul>
 				{{#each doc.passion}}
 					<li>
 						<h3><a href='{{url}}' target='_blank'>{{title}}</a></h3>
 						<p class='credit'>Credit: {{name}}</p>
-						<a href='{{url}}' target='_blank'><img src='assets/img/{{img}}.jpg'></a>
+						<a href='{{url}}' target='_blank'><img src='assets/images/{{img}}@2x.jpg'></a>
 						{{#each remarks}}
 							<p>{{{value}}}</p>
 						{{/each}}
 					</li>
 				{{/each}}
 			</ul>
-	
-			<h3>{{doc.passionOtherHed}}</h3>
+
+			<div class='hed'>
+				<h2>Honorable Mentions</h2>
+				<p>Definitely worth a click.</p>
+			</div>
 			<ul class='other'>
 				{{#each doc.passionOther}}
 					<li>
@@ -62,29 +62,11 @@
 				<h2>{{doc.hed2}}</h2>
 				<p>{{doc.dek2}}</p>
 				<p>{{doc.prize2}}</p>
-			</div>	
-		</section> --}}
-	
-	
-		{{!-- <div class='prose details'>
-			<ul>
-				{{#each doc.details}}
-				<li>{{{value}}}</li>
-				{{/each}}
-			</ul>
-		</div> --}}
-
-
-		{{!-- <p class='submit'>
-			<a href='{{doc.submit}}' target='_blank'>Enter Now!</a>
-		</p> --}}
-
+			</div>
+		</section>
 
 		<p class='commercial'>*{{{doc.commercial}}}</p>
 
-
-	
-	
 	</main>
 
 	{{> base/footer }}
